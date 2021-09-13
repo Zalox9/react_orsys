@@ -11,9 +11,13 @@ console.log(props);
     );
 }
 
-Button.PropTypes={
-    children:PropTypes.any.isRequired //info console si aucun element dans children pt->PropTypes
+// Button.propTypes={
+//     children:PropTypes.any.isRequired //info console si aucun element dans children pt->PropTypes
+// }
+Button.defaultProps={
+    children:"default button value"
 }
+
 
 export default Button;
 
