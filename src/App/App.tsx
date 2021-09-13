@@ -6,8 +6,10 @@ function App() {
   return (
     <div className="App">
       Hello world !
-      <hr/>
-      <Button text="Ok" bgcolor="skyblue" />
+      <hr />
+      <Button text="Ok" bgcolor="skyblue">
+        <img src="/img/ok.png" alt="btn ok" />
+      </Button>
     </div>
   );
 }
