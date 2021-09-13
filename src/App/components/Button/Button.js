@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 function Button(props) { //const Button=()=>{}
 console.log(props);
     return (
-        <button className={props.classColor?'Button'+props.classColor:'Button'} type={props.type}>{props.children}</button>
+        <button className={props.classColor?'Button '+props.classColor:'Button'} type={props.type}>{props.children}</button>
     );
 }
 
