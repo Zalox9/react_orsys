@@ -7,8 +7,12 @@ function App() {
     <div className="App">
       Hello world !
       <hr />
-      <Button text="Ok" bgcolor="skyblue">
+      <Button bgcolor="skyblue">
         <img src="/img/ok.png" alt="btn ok" />
+      </Button>
+      <Button bgcolor="skyblue">
+        <img src="/img/cancel.png" alt="btn cancel" />
+        Cancel
       </Button>
     </div>
   );
