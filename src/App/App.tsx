@@ -10,7 +10,7 @@ function App() {
       <Button classColor="primary">
         <img src="/img/ok.png" alt="btn ok" />
       </Button>
-      <Button classColor="">
+      <Button classColor="primary">
         <img src="/img/cancel.png" alt="btn cancel" />
         Cancel
       </Button>
