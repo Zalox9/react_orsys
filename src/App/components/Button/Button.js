@@ -9,7 +9,7 @@ console.log(props);
     return (
         <button className="Button"
         type={props.type}
-        style={{backgroundColor:props.bgColor}}
+        style={{backgroundColor:props.bgColor,...props.style}}
         >{props.children}</button>
     );
 }
@@ -17,10 +17,12 @@ console.log(props);
 Button.propTypes={
     children:PropTypes.any.isRequired, //info console si aucun element dans children pt->PropTypes
     bgColor:PropTypes.string,
+    style:PropTypes.object,
 }
 
 Button.defaultProps={
-    children:"default button value"
+    children:"default button value", //valeur par défaut
+    bgColor:"DarkOrange",
 }
 
 

@@ -10,7 +10,7 @@ function App() {
       <Button bgColor="green">
         <img src="/img/ok.png" alt="btn ok" />
       </Button>
-      <Button bgColor="tomato">
+      <Button bgColor="tomato" style={{textDecoration:'underline', backgroundColor:'red'}}>
         <img src="/img/cancel.png" alt="btn cancel" />
         Cancel
       </Button>
