@@ -10,19 +10,19 @@
     border-bottom: solid 5px black;
 }
 
-.Button:hover{
+/* .Button:hover{
     background-color: skyblue;
     color: rgb(67, 67, 250);
-}
+} */
 
 
-.Button.primary{
+/* .Button.primary{
     background-color: chartreuse;
 }
 
 .Button.primary:hover{
     background-color: rgb(170, 255, 85);
-}
+} */
 
 
 
