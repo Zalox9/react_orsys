@@ -1,6 +1,5 @@
 import React from 'react';
-// import logo from './logo.svg';
-import Button from './components/Button/Button'
+import Button from './components/Button/Button' //imp <- raccourcie
 import './App.css';
 
 function App() {

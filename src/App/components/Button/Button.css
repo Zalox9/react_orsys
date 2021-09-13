@@ -1,3 +1,18 @@
 .Button{
+    padding: 15px 10px;
+    margin: 5px 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    box-shadow: 15px 15px 20px grey;
+}
 
+.Button:hover{
+    background-color: red;
+}
+
+.Button:active{
+    
 }
