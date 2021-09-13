@@ -7,6 +7,7 @@
     color: whitesmoke;
     border: none;
     box-shadow: 15px 15px 20px grey;
+    border-bottom: solid 5px black;
 }
 
 .Button:hover{
@@ -14,8 +15,20 @@
     color: rgb(67, 67, 250);
 }
 
+
+.Button.primary{
+    background-color: chartreuse;
+}
+
+.Button.primary:hover{
+    background-color: rgb(170, 255, 85);
+}
+
+
+
 .Button:active{
-    padding: 10px 5px;
+    padding: 20px 10px;
+    border-bottom: none;
 }
 
 .Button img{

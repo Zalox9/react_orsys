@@ -7,10 +7,10 @@ function App() {
     <div className="App">
       Hello world !
       <hr />
-      <Button bgcolor="skyblue">
+      <Button classColor="primary">
         <img src="/img/ok.png" alt="btn ok" />
       </Button>
-      <Button bgcolor="skyblue">
+      <Button classColor="">
         <img src="/img/cancel.png" alt="btn cancel" />
         Cancel
       </Button>
