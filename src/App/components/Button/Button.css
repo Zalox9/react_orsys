@@ -4,15 +4,16 @@
     font-size: 20px;
     border-radius: 10px;
     background-color: blue;
-    color: white;
+    color: whitesmoke;
     border: none;
     box-shadow: 15px 15px 20px grey;
 }
 
 .Button:hover{
-    background-color: red;
+    background-color: whitesmoke;
+    color: blue;
 }
 
 .Button:active{
-    
+    padding: 0px 5px;
 }
