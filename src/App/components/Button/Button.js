@@ -12,7 +12,7 @@ console.log(props);
         style={{backgroundColor:props.bgColor,...props.style}}
         onClick={(evt)=>{
             props.onClickEvent("blabla");
-        }} //arrow fonction perserve 
+        }} //arrow fonction perserve le contexte
         >{props.children}</button>
     );
 }
