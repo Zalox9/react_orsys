@@ -1,13 +1,13 @@
-import React from 'react' ///imr <- raccourcie
+import React, {useState} from 'react' ///imr <- raccourcie
 import './Button.css'
 import PropTypes from 'prop-types'
 
 
 
 function Button(props) { //const Button=()=>{}
-console.log(props);
+    const [clicked, setclicked] = useState(false) //etat par default
     return (
-        <button className="Button "
+        <button className={clicked?'Button clicked':'Button'} //ternaire
         type={props.type}
         style={{backgroundColor:props.bgColor,...props.style}}
         onClick={(evt)=>{

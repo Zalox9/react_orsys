@@ -12,12 +12,12 @@
 
 .Button:hover{
     background-color: skyblue;
-    box-shadow: 15px 15px 50px grey;
+    /* box-shadow: 15px 15px 50px grey; */
     color: rgb(67, 67, 250);
 }
 
 .Button.clicked{
-
+    box-shadow: 15px 15px 10px grey;
 }
 
 /* .Button.primary{
