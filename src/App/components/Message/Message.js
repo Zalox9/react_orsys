@@ -4,7 +4,7 @@ import styles from './Message.module.scss';
 
 const Message = (props) => (
   <div className={styles.Message} data-testid="Message">
-    <img src={props.message.user.img} />
+    <img src={props.message.user.img} alt="profil" />
     <div>
       <div className={styles.messageHeader}>
         <strong>{props.message.user.nickname}</strong> : {props.message.dateTime}

@@ -1,1 +1,10 @@
-.FormMessage {}
+form {display: flex;}
+
+form>*:nth-child(1){
+    flex-grow: 1;
+}
+
+
+form>*:nth-child(1)>*{
+    width: 100%;
+}
