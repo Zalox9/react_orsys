@@ -36,7 +36,7 @@ const MessageList = (props) => {
           messageListState.map((e, i) => <Message message={e} key={`mess-${i}`} />)
         }
       </div>
-      
+
       {/* {JSON.stringify(messageListState)} */}
     </div>
   )
