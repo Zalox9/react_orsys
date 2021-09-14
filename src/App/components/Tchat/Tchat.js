@@ -7,9 +7,9 @@ import styles from './Tchat.module.scss';
 
 const Tchat = () => (
   <div className={styles.Tchat} data-testid="Tchat">
-    <FlexContainer type="horizontal" style={{height: "98vh"}}>
+    <FlexContainer type="horizontal" style={{ height: "98vh"}}>
       {/* partie supérieur */}
-      <FlexContainer type="vertical">
+      <FlexContainer type="vertical" >
         <MessageList />
         <UserList />
       </FlexContainer>
