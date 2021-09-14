@@ -17,7 +17,7 @@
 }
 
 .Button.clicked{
-    box-shadow: 15px 15px 10px grey;
+    box-shadow: 15px 15px 10px grey; /*!important   permet de donner la priorité*/
 }
 
 /* .Button.primary{
