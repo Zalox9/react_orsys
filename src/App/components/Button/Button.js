@@ -12,8 +12,8 @@ function Button(props) { //const Button=()=>{}
         style={{backgroundColor:props.bgColor,...props.style}}
         onClick={(evt)=>{
             setclicked(true);
-            props.onClickEvent("blabla");
             setTimeout(()=>{setclicked(false)}, 300); //necessite callback
+            props.onClickEvent("blabla");
         }} //arrow fonction perserve le contexte
         >{props.children}</button>
     );
