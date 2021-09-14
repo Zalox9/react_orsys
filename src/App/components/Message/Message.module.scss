@@ -1,1 +1,26 @@
-.Message {}
+.Message {
+    display: flex;
+    border-bottom: solid 1px black;
+    padding-bottom: 5px;
+    margin: 5px;
+}
+
+.Message>n*:nth-child(1){
+    flex-grow: 1;
+}
+
+.Message img{
+    max-height: 54px;
+    border-right: solid 1px grey;
+}
+
+.messageHeader{
+    flex: auto;
+    margin-left: 5px;
+    border-bottom: solid 1px grey;
+}
+
+.message{
+    margin-left: 5px;
+    text-align: left;
+}

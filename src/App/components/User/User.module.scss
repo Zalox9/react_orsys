@@ -1,0 +1,14 @@
+.User {
+        border-bottom: solid 1px black;
+        display: flex;
+        margin: 5px
+}
+
+.round {
+        overflow:hidden;
+        -webkit-border-radius:50px;
+        -moz-border-radius:50px;
+        border-radius:50px;
+        width:30px;
+        height:30px;
+}

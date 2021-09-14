@@ -2,6 +2,7 @@ import React from 'react';
 import FlexContainer from '../FlexContainer/FlexContainer';
 import FormMessage from '../FormMessage/FormMessage';
 import MessageList from '../MessageList/MessageList';
+import SelectUser from '../SelectUser/SelectUser';
 import UserList from '../UserList/UserList';
 import styles from './Tchat.module.scss';
 
@@ -13,8 +14,9 @@ const Tchat = () => (
         <MessageList />
         <UserList />
       </FlexContainer>
-      {/* partie supérieur */}
-      <FormMessage></FormMessage>
+      {/* partie inférieur */}
+      <FormMessage>
+      </FormMessage>
     </FlexContainer>
   </div>
 );
