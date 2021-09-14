@@ -20,7 +20,7 @@ const FormMessage = (props) => {
         evt.preventDefault(); //empeche le rechargement de la page
       }}>
         <MessageInput value={FormMessageState.text} onChange={(evt)=>{setFormMessageState({...FormMessageState, text:evt.target.value})}}></MessageInput>
-        <SelectUser users={userListInitialState}></SelectUser>
+        <SelectUser value={FormMessageState.destId} users={userListInitialState} onChange={(evt)=>setFormMessageState({...FormMessageState, destId:Number(evt.target.value)})}></SelectUser>
         <Button type="submit">Envoyer</Button>
       </form>
     </div>
