@@ -1,0 +1,19 @@
+.Auth {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: tomato;
+}
+
+.authContainer {
+    vertical-align: bottom;
+    margin-top: 25vh;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 20vw;
+    width: 60vw;
+    box-shadow: 20px 20px 35px grey;
+}

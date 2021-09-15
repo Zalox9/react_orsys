@@ -5,17 +5,23 @@ import SelectUser from '../SelectUser/SelectUser';
 import MessageInput from '../MessageInput/MessageInput';
 import Button from '../Button/Button'
 import store, { initialState, ACTIONS } from '../../store/store';
+import { useParams } from 'react-router-dom'
+
 
 export const FormMessageInitialState = {
   text: 'new text',
-  destId: 0
+  destId: 0,
+  userId: -1
 };
 
 
 const FormMessage = (props) => {
+  console.log(useParams())
   const [FormMessageState, setFormMessageState] = useState(FormMessageInitialState);
+  const userId=Number(useParams().id);
   const [UserListInitialState, setUserListInitialState] = useState(initialState.users);
   useEffect(()=> {
+    setFormMessageState({...FormMessageState, userId:userId})
     setUserListInitialState(store.getState().tchat.users) //init
     store.subscribe(()=>{
       setUserListInitialState(store.getState().tchat.users)
