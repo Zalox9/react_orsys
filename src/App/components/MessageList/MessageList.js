@@ -45,8 +45,9 @@ const MessageList = (props) => {
       <div style={{ height: '100%', overflowY: 'scroll' }}>
         {
           messageListState.map((e, i) =>{
+            const uu=usersListState.find((u)=>e.userId===u.id);
           return <Message message={
-            {...e, user:usersListState.find((u)=>e.userId===u.id)}}
+            {...e, user:uu?uu:{}}}
             key={`mess-${i}`} />
         })
       }
