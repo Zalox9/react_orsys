@@ -5,8 +5,8 @@ import styles from './User.module.scss';
 const User = (props) => (
   <div className={styles.User} data-testid="User">
     <div >
-      <img className={styles.round} src={props.info.user.img} />
-      {props.info.user.nickname}
+      <img className={styles.round} src={props.info.img} />
+      {props.info.nickname}
     </div>
   </div>
 );

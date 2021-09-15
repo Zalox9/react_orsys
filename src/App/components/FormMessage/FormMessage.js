@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './FormMessage.module.scss';
-import { userListInitialState } from '../UserList/UserList';
 import SelectUser from '../SelectUser/SelectUser';
 import MessageInput from '../MessageInput/MessageInput';
 import Button from '../Button/Button'
+import store, { initialState } from '../../store/store';
 
 export const FormMessageInitialState = {
   text: 'new text',
@@ -13,6 +13,13 @@ export const FormMessageInitialState = {
 
 const FormMessage = (props) => {
   const [FormMessageState, setFormMessageState] = useState(FormMessageInitialState);
+  const [UserListInitialState, setUserListInitialState] = useState(initialState.users);
+  useEffect(()=> {
+    setUserListInitialState(store.getState().tchat.users) //init
+    store.subscribe(()=>{
+      setUserListInitialState(store.getState().tchat.users)
+    })
+  },[])
   return (
     <div className={styles.FormMessage} data-testid="FormMessage">
       {JSON.stringify(FormMessageState)}
@@ -20,7 +27,7 @@ const FormMessage = (props) => {
         evt.preventDefault(); //empeche le rechargement de la page
       }}>
         <MessageInput value={FormMessageState.text} onChange={(evt) => { setFormMessageState({ ...FormMessageState, text: evt.target.value }) }}></MessageInput>
-        <SelectUser value={FormMessageState.destId} users={userListInitialState} onChange={(evt) => setFormMessageState({ ...FormMessageState, destId: Number(evt.target.value) })}></SelectUser>
+        <SelectUser value={FormMessageState.destId} users={UserListInitialState} onChange={(evt) => setFormMessageState({ ...FormMessageState, destId: Number(evt.target.value) })}></SelectUser>
         <Button type="submit">Envoyer</Button>
       </form>
     </div>

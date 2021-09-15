@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+import { combineReducers, createStore } from 'redux';
 
 //etat initial pour reprise par les composants pour calque des etats initiaux locaux
 export const initialState = { messages: [], users: [], lastMessageId:-1 };
@@ -27,11 +27,11 @@ function reducers(state = initialState, action) {
                     })
             }, 1000)
             setInterval(() => {
-                fetch('http://localhost:5679/messages?id_gte=' + (store.getState().lastMessageId + 1),
+                fetch('http://localhost:5679/messages?id_gte=' + (store.getState().tchat.lastMessageId + 1),
                 { method: 'GET' })
                     .then(flux => flux.json())
                     .then(arr => {
-                        let lastId = store.getState().lastMessageId;
+                        let lastId = store.getState().tchat.lastMessageId;
                         arr.map(element => {
                             if (lastId < element.id) lastId = element.id
                             return null;
@@ -58,6 +58,24 @@ function reducers(state = initialState, action) {
 
     }
 }
+// etat initial pour la modal
+const modalInitialState = {
+    isShown:false,
+    content:null
+}
+
+const modalReducer = (state = modalInitialState, action) => {
+    switch (action.type) {
+
+    case 'SHOW':
+        return { ...state, isShown:true, content:action.value }
+    case 'HIDE':
+         return { ...state, isShown:false, content:null }
+    default:
+        return state
+    }
+}
+
 
 // let state=reducers(undefined, {type:PRIVATE_ACTIONS.INIT});
 // console.log(state);
@@ -68,10 +86,12 @@ function reducers(state = initialState, action) {
 // state=reducers(state,{type:ACTIONS.SET_USERS, values:[{id:2},{id:3}]})
 // console.log(state);
 
-export const store=createStore(reducers);
+export const store=createStore(combineReducers({tchat:reducers, modal:modalReducer}));
 //des qu'il a un chngt
 store.subscribe(()=>{
     console.warn(store.getState())
 })
 
 store.dispatch({type:PRIVATE_ACTIONS.INIT});
+
+export default store;
